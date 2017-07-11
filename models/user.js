@@ -9,9 +9,14 @@ const UserSchema = new Schema({
   password: String,
   photo: String,
   about: String,
+  facebookId: String,
+  googleId: String,
   gigs: [{
      type: Schema.Types.ObjectId, ref: 'Gig'
-  }]
+  }],
+  cart: [{
+     type: Schema.Types.ObjectId, ref: 'Gig'
+  }],
 });
 
 UserSchema.pre('save', function(next) {
