@@ -14,7 +14,7 @@ router.route('/signup')
   .post((req, res, next) => {
     User.findOne({ email: req.body.email }, function(err, existingUser) {
       if (existingUser) {
-        req.flash('errors',  'Account with that email address already exists.');
+        req.flash('errors',  'Un compte existe déja avec cette adresse mail');
         return res.redirect('/signup');
       } else {
         var user = new User();
@@ -67,7 +67,7 @@ router.route('/login')
 /* PROFILE ROUTE */
 router.route('/profile')
    .get(passportConfig.isAuthenticated, (req, res, next) => {
-  res.render('accounts/profile', { message: req.flash('success')});
+  res.render('accounts/profile', { message: req.flash('succés')});
    })
    .post((req, res, next) => {
      User.findOne({ _id: req.user._id}, function(err, user) {
@@ -76,7 +76,7 @@ router.route('/profile')
          if (req.body.email) user.email = req.body.email;
          if (req.body.about) user.about = req.body.about;
          user.save(function(err) {
-           req.flash('success', 'Your details have been updated');
+           req.flash('succés', 'Details mise à jour');
            res.redirect('/profile');
 
          });

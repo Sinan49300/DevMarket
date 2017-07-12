@@ -13,7 +13,7 @@
                 <hr />
                 <h3>
                   <span></span>
-                  <span><button class="btn btn-danger remove-item" id="{{ _id }}">Remove</button></span>
+                  <span><button class="btn btn-danger remove-item" id="{{ _id }}">Supprimer</button></span>
                 </h3>
               </div>
             </div>
@@ -27,7 +27,7 @@
       <div class="overview">
         <div class="cart-summary">
           <div class="margin-both">
-            <h2 class="text-center">Summary</h2>
+            <h2 class="text-center">Récapitulatif</h2>
             <hr />
             {{#if cartIsEmpty }}
             <div class="cart">
@@ -40,17 +40,17 @@
             <div class="input-group promocode">
               <input type="text" class="form-control" placeholder="Enter promocode" id="code">
               <span class="input-group-btn">
-                <button class="btn btn-success btn-block" id="promocodeButton">Apply</button>
+                <button class="btn btn-success btn-block" id="promocodeButton">Appliquer</button>
               </span>
               <p class="text-center" id="promocodeResponse"></p>
             </div>
             <hr />
             <div class="space-between">
-              <h4><span>Subtotal: </span><span class="dollar fee"><span id="subTotal">{{ sub_total }}</span>€</span></h4>
+              <h4><span>Sous-total</span><span class="dollar fee"><span id="subTotal">{{ sub_total }}</span>€</span></h4>
             </div>
             <hr />
             <div class="space-between">
-              <h4><span>Fee: </span><span class="dollar fee">3.15€</span></h4>
+              <h4><span>Taxe: </span><span class="dollar fee">3.15€</span></h4>
             </div>
 
             <hr />
@@ -60,10 +60,10 @@
             </div>
             <hr />
 
-            <a href="/payment/cart" class="btn btn-success btn-lg proceed-btn">Proceed to payment</a>
+            <a href="/payment/cart" class="btn btn-success btn-lg proceed-btn">Procéder au paiment</a>
 
             {{ else }}
-              Cart is Empty
+              Panier vide
 
             {{/if }}
           </div>

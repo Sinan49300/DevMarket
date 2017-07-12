@@ -16,7 +16,7 @@
             <div class="overview">
                 <div class="about-card">
                     <div class="name">
-                        <h2 class="h2-size">About gig</h2>
+                        <h2 class="h2-size">Description du service</h2>
                         <hr />
                         <h4> {{ gig.about }}</h4>
                     </div>
@@ -28,8 +28,8 @@
             <div class ="overview">
               <div class="order-card">
                 <div class="name">
-                    <h3> {{ gig.price }}€ Order Details</h3>
-                    <a href="/checkout/single_package/{{gig._id}}" class="btn btn-success btn-lg">Proceed to order</a>
+                    <h3> {{ gig.price }}€ Detail du paiment</h3>
+                    <a href="/checkout/single_package/{{gig._id}}" class="btn btn-success btn-lg">Procéder au paiment</a>
                     <button class="btn btn-success btn-lg space-left" id="add-to-cart"><i class="fa fa-shopping-cart "></i></button>
                 </div>
               </div>

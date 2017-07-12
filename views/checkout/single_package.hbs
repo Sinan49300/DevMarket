@@ -4,7 +4,7 @@
             <div class="overview">
                 <div class="single-order-package-card">
                     <div class="margin-both">
-                        <h2 class="text-center">Summary</h2>
+                        <h2 class="text-center">Résumé</h2>
                         <hr />
                         <div class="inner">
                             <img class="img-circle" src="{{ gig.picture }}">
@@ -13,9 +13,9 @@
                         </div>
                         <hr />
                         <div class="input-group promocode">
-                            <input type="text" class="form-control" placeholder="Enter promocode" id="code">
+                            <input type="text" class="form-control" placeholder="Entrer un code promo" id="code">
                             <span class="input-group-btn">
-                                <button class="btn btn-success btn-block" id="promocodeButton">Apply</button>
+                                <button class="btn btn-success btn-block" id="promocodeButton">Appliquer</button>
                             </span>
                             <p class="text-center" id="promocodeResponse"> 
                         </div>
@@ -23,13 +23,13 @@
                         <hr />
 
                         <div class="space-between">
-                            <h4><span>Subtotal: </span><span class="dollar fee">{{ gig.price}}€</span></h4>
+                            <h4><span>Sous-total: </span><span class="dollar fee">{{ gig.price}}€</span></h4>
                         </div>
 
                         <hr/>
 
                         <div class="space-between">
-                            <h4><span>Fee: </span><span class="dollar fee">3.15€</span></h4>
+                            <h4><span>TVA: </span><span class="dollar fee">3.15€</span></h4>
                         </div>
 
                         <hr/>
@@ -40,7 +40,7 @@
 
                         <hr />
 
-                        <a href="/payment" class="btn btn-success btn-lg proceed-btn">Proceed to payment</a>
+                        <a href="/payment" class="btn btn-success btn-lg proceed-btn">Procéder au paiment</a>
 
                     </div>
                 </div>
